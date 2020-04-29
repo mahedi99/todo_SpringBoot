@@ -1,4 +1,4 @@
-package com.mahedi.rest.webservices.restfulwebservices;
+package com.mahedi.rest.webservices.restfulwebservices.helloworld;
 
 /**
  * @author Mahedi Hassan
