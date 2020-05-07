@@ -1,14 +1,14 @@
-package com.mahedi.rest.webservices.restfulwebservices.helloworld;
+package com.mahedi.rest.webservices.restfulwebservices.basic.auth;
 
 /**
  * @author Mahedi Hassan
  * 2020-04-28
  */
 
-public class HelloWorldBean {
+public class AuthBean {
     private String message;
 
-    public HelloWorldBean(String message) {
+    public AuthBean(String message) {
         this.message = message;
     }
 
