@@ -1,0 +1,22 @@
+package com.mahedi.rest.webservices.restfulwebservices.jwt.resource;
+
+import java.io.Serializable;
+
+/**
+ * @author Mahedi Hassan
+ * 2020-05-08
+ */
+public class JwtTokenResponse implements Serializable {
+
+  private static final long serialVersionUID = 8317676219297719109L;
+
+  private final String token;
+
+    public JwtTokenResponse(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return this.token;
+    }
+}

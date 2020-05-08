@@ -1,4 +1,4 @@
-package com.mahedi.rest.webservices.restfulwebservices.basic.auth;
+package com.mahedi.rest.basic.auth;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
