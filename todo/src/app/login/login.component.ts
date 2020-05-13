@@ -32,10 +32,26 @@ export class LoginComponent implements OnInit {
   //   }
   // }
 
-  handleBasicAuthLogin(){
+  // handleBasicAuthLogin(){
+  //   console.log(this.username);
+  //   // if(this.username === "mahedi" && this.password == "p"){  
+  //   this.basicAuthService.executeAuthService(this.username, this.password).subscribe(
+  //     data => {
+  //       console.log(data);
+  //       this.router.navigate(['welcome', this.username])
+  //       this.invalidLogin = false
+  //     },
+  //     error => {
+  //       console.log(error)
+  //       this.invalidLogin = true
+  //     }
+  //   )
+  // }
+
+  handleJwtAuthLogin(){
     console.log(this.username);
     // if(this.username === "mahedi" && this.password == "p"){  
-    this.basicAuthService.executeAuthService(this.username, this.password).subscribe(
+    this.basicAuthService.executeJwtAuthService(this.username, this.password).subscribe(
       data => {
         console.log(data);
         this.router.navigate(['welcome', this.username])
