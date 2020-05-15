@@ -18,16 +18,16 @@ public class Todo {
     @GeneratedValue
     private Long id;
 
-    private String userName;
+    private String username;
     private String description;
     private Date targetDate;
     private boolean isDone;
 
     protected Todo(){}
 
-    public Todo(Long id, String userName, String description, Date targetDate, boolean isDone) {
+    public Todo(Long id, String username, String description, Date targetDate, boolean isDone) {
         this.id = id;
-        this.userName = userName;
+        this.username = username;
         this.description = description;
         this.targetDate = targetDate;
         this.isDone = isDone;
@@ -41,12 +41,12 @@ public class Todo {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     public String getDescription() {

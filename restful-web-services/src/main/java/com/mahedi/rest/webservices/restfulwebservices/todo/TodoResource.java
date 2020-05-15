@@ -29,17 +29,18 @@ public class TodoResource {
 
     @GetMapping("/user/{username}/todos")
     public List<Todo> getAllTodo(@PathVariable String username){
-        return todoJpaRepository.findByUserName(username);
+        List<Todo> todos = todoJpaRepository.findByUsername(username);
+        return todos;
     }
 
     @DeleteMapping("/user/{username}/todos/{id}")
-    public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable long id){
+    public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable Long id){
         todoJpaRepository.deleteById(id);
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/user/{username}/todos/{id}")
-    public ResponseEntity<Todo> updateTodo(@PathVariable String username, @PathVariable long id, @RequestBody Todo todo){
+    public ResponseEntity<Todo> updateTodo(@PathVariable String username, @PathVariable Long id, @RequestBody Todo todo){
 //        Todo updatedTodo = todoService.saveTodo(todo);
         Todo updatedTodo = todoJpaRepository.save(todo);
         return new ResponseEntity<Todo>(updatedTodo, HttpStatus.OK);
@@ -54,5 +55,9 @@ public class TodoResource {
         return ResponseEntity.created(uri).build();
     }
 
-
+//    {
+//        "description":"aaaaa",
+//            "targetDate": null,
+//            "isDone":true
+//    }
 }
